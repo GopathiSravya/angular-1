@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { TemplateDrivenComponentComponent } from './template-driven-component.component';
+import { LoansearchComponent } from './loansearch.component';
 import expect from 'expect';
 import { describe, beforeEach, it } from 'node:test';
 
-describe('TemplateDrivenComponentComponent', () => {
-  let component: TemplateDrivenComponentComponent;
-  let fixture: ComponentFixture<TemplateDrivenComponentComponent>;
+describe('LoansearchComponent', () => {
+  let component: LoansearchComponent;
+  let fixture: ComponentFixture<LoansearchComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [TemplateDrivenComponentComponent]
+      declarations: [LoansearchComponent]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(TemplateDrivenComponentComponent);
+    fixture = TestBed.createComponent(LoansearchComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

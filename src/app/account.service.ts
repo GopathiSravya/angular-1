@@ -12,20 +12,14 @@ export class AccountService {
   
 
   createAccount(account : any) : Observable<any>{
-    const httpheders ={
+    const httpheaders ={
       headers: new HttpHeaders({
         'Content-Type':'application/json',
         'Accept' : 'application/json'
       })
     };
     console.log("form service method");
-    return  this.http.post('http://localhost:8080/createAccount' ,account,httpheders)
+    return  this.http.post('http://localhost:8080/createAccount' ,account,httpheaders)
 
   }
-
-  
-
-  
-
-
 }

@@ -4,8 +4,6 @@
         <input type="text" name="restaurantName" id="restaurantName" class="form-control" [(ngModel)]="restaurant.name">
         {{restaurant.name}}
     </div>
-    
-    <app-address [address]="restaurant.address" (addressChange)="updateAddress($event)"></app-address>
     <app-rating [rating]="restaurant.rating.rating" [commonts]="restaurant.rating.commonts" (ratingChange)="updateRating($event )"></app-rating>
     <button type="submit" class="btn btn-primary" (click)="addRestaurant()">Add Restaurant</button>
 

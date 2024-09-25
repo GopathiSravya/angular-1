@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { Account } from '../model/Account';
 import { AccountService } from '../account.service';
 import { Address } from '../model/Address';
+import { AddressComponent } from '../address/address.component';
 
 @Component({
   selector: 'app-createaccount',
@@ -9,22 +10,22 @@ import { Address } from '../model/Address';
   styleUrl: './createaccount.component.css'
 })
 export class CreateaccountComponent {
-
+custaddress: AddressComponent | undefined;
   constructor(private accountService: AccountService){
 
   }
 
-  AccountNubmer: string = "test";
+  AccountNumber:string="test";
   account = new Account('','','',0,'',new Address('','','','',''));
 
-  createAccount(){
+  createAccount(custaddress:AddressComponent){
 
     console.log(JSON.stringify(this.account))
     this.accountService.createAccount(this.account).subscribe(
       data =>{
         console.log(JSON.stringify(data));
         
-        this.AccountNubmer = data.accountNumber;
+        this.AccountNumber = data.accountNumber;
       }
     )
   }

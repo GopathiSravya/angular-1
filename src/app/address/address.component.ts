@@ -8,16 +8,12 @@ import { Address } from '../model/Address';
   styleUrl: './address.component.css'
 })
 export class AddressComponent {
-
- @Input()
- address : Address= new Address('','','','','') ;
- @Output() addressChange = new EventEmitter<Address>();
-
- changeAddress(newAddress : Address){
-  this.addressChange.emit(newAddress);
- }
-
-
-
-
+address={
+  add1:'',
+  add2:'',
+  pincode:'',
+  city:'',
+  state:''
 }
+
+ }

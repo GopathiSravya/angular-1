@@ -1,19 +1,22 @@
-import { TestBed } from '@angular/core/testing';
-import { RouterModule } from '@angular/router';
-import { AppComponent } from './app.component';
+import { TestBed } from "@angular/core/testing";
+import { RouterModule } from "@angular/router";
+import { AppComponent } from "./app.component";
+import { CommonModule } from "@angular/common";
+import { beforeEach, describe, it } from "node:test";
+import expect from "expect";
 
-describe('AppComponent', () => {
-  beforeEach(async () => {
+describe('AppComponent',()=>{
+  beforeEach(async ()=>{
     await TestBed.configureTestingModule({
-      imports: [
-        RouterModule.forRoot([])
+      imports:[
+        RouterModule.forRoot([]),
+        CommonModule
       ],
-      declarations: [
+      declarations:[
         AppComponent
       ],
     }).compileComponents();
   });
-
   it('should create the app', () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;

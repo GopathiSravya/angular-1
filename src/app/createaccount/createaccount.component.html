@@ -1,23 +1,25 @@
-<div class="comtainer-fluied">
-    <h6>Create Account {{AccountNubmer}}</h6>
+<div class="container">
+    <h2>Create Account</h2>
+    <form>
+        <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" id="name" class="form-control" placeholder="enter your name">
+        </div>
+        <div class="form-group">
+            <label for="pan">PAN:</label>
+            <input type="text" id="pan" class="form-control" placeholder="Enter your PAN">
+          </div>
+      
+          <div class="form-group">
+            <label for="mobile">Mobile:</label>
+            <input type="tel" id="mobile" class="form-control" placeholder="Enter your mobile number">
+          </div>
+      
+          <div class="form-group">
+            <label for="balance">Balance:</label>
+            <input type="number" id="balance" class="form-control" placeholder="Enter initial balance">
+          </div>
+          <button type="submit" class="btn btn-primary">Create Account</button>
 
-    <div class="form-group"><label for="name">Name</label>
-        <input class="form-control" type="text" name="name" [(ngModel)]="account.name">
-    </div>
-    <div class="form-group">
-        <label for="name">Pan Number</label>
-        <input class="form-control" type="text" name="pan" [(ngModel)]="account.pan">
-    </div>
-    <div class="form-group">
-        <label for="name">Mobile</label>
-        <input class="form-control" type="text" name="mobile" [(ngModel)]="account.mobileNumber">
-    </div>
-    <div class="form-group " [(ngModel)]="account.balance">
-        <label for="name">Balance</label>
-        <input class="form-control" type="text" name="balance">
-    </div>
-    <app-address></app-address>
-    <button type="submit" class="btn btn-primary" (click)="createAccount()">Submit</button>
-
-   
+    </form>
 </div>

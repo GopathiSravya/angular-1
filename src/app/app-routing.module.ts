@@ -7,6 +7,8 @@ import { CreateaccountComponent } from './createaccount/createaccount.component'
 import { AtmLoginService } from './atm-login.service';
 import { AtmloginComponent } from './atmlogin/atmlogin.component';
 import { HomeComponent } from './home/home.component';
+import { LoansearchComponent } from './loansearch/loansearch.component';
+import { AddressComponent } from './address/address.component';
 
 const routes: Routes = [
    // Wildcard route
@@ -15,7 +17,9 @@ const routes: Routes = [
    {path : 'addrestaurant', component: RestaurantComponent},
    {path: 'createaccount', component: CreateaccountComponent},
    {path:'login' , component: AtmloginComponent},
-{path:'home', component: HomeComponent}
+   {path:'searchaccount',component:LoansearchComponent},
+   {path:'home', component: HomeComponent},
+   {path:'address',component:AddressComponent}
    
 ];
 
